@@ -1,0 +1,52 @@
+<mvc:View controllerName="sap.kt.fragment.fragment.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns:f="sap.ui.layout.form"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+        <content>
+          <f:SimpleForm
+			editable="true"
+			layout="ResponsiveGridLayout"
+			labelSpanXL="3"
+			labelSpanL="3"
+			labelSpanM="3"
+			labelSpanS="12"
+			adjustLabelSpan="false"
+			emptySpanXL="4"
+			emptySpanL="4"
+			emptySpanM="4"
+			emptySpanS="0"
+			columnsXL="1"
+			columnsL="1"
+			columnsM="1"
+			singleContainerFullSize="false" >
+			<f:content>
+				
+			</f:content>
+		</f:SimpleForm> 
+        <Button text='Click Me' press="onPressEvent" />
+        <Table id="TableId"  mode="Delete" delete="onDelete" items="{path:'modelStudent>/'}">
+            <columns>
+                <Column >
+                    <Text text="Expenet Id" />
+                </Column>
+                <Column >
+                    <Text text="Name" />
+                </Column>
+                <Column >
+                    <Text text="Amount" />
+                </Column>
+            </columns>
+            <items>
+                <ColumnListItem id="comunListId" >
+                    <cells>
+                        <Text text="{modelStudent>id}"/>
+                        <Text text="{modelStudent>name}"/>
+                        <Text text="{modelStudent>amount}"/>
+                    </cells>
+                </ColumnListItem>
+            </items>
+        </Table>
+        </content>
+    </Page>
+</mvc:View>
